@@ -20,12 +20,14 @@ This project checks for mismatches between Salesforce contract events and data i
 
 ## Project Structure
 
+```
 contract-check-lambda/
 ├── app.py               # Lambda function logic
 ├── Dockerfile           # Lambda image definition
 ├── requirements.txt     # Python dependencies
 ├── .env.example         # Sample environment variables
 └── README.md            # Project documentation
+```
 
 ## Deployment Steps
 
