@@ -38,9 +38,13 @@ contract-check-lambda/
 
 ### 1. Build and Push Docker Image
 
+```bash
 docker build -t contract-check .
+
 docker tag contract-check:latest [account_id].dkr.ecr.[region].amazonaws.com/contract-check:latest
+
 docker push [account_id].dkr.ecr.[region].amazonaws.com/contract-check:latest
+```
 
 ### 2. Create Lambda Function from Image
 
@@ -58,7 +62,7 @@ docker push [account_id].dkr.ecr.[region].amazonaws.com/contract-check:latest
 
 The function uploads the mismatch report to:
 
-s3://<your-bucket-name>/contract_event_mismatches.csv
+`s3://<your-bucket-name>/contract_event_mismatches.csv`
 
 ## Local Testing
 
@@ -68,8 +72,10 @@ To run locally:
 2. Set your credentials and values  
 3. Run the script with:
 
+``` bash
 export $(cat .env | xargs)
 python app.py
+```
 
 ## Environment Variables
 
